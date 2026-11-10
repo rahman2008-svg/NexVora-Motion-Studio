@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="nv_background">#FF090B12</color>
+    <color name="nv_background_secondary">#FF111522</color>
+    <color name="nv_surface">#FF171D2B</color>
+    <color name="nv_cyan">#FF00D5FF</color>
+    <color name="nv_purple">#FF8957FF</color>
+    <color name="nv_text_primary">#FFF7F9FF</color>
+    <color name="nv_text_secondary">#FF9AA5B8</color>
+    <color name="nv_divider">#FF283044</color>
+</resources>

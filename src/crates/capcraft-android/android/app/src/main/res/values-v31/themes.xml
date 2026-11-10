@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Android 12+ system splash: the NexVora Motion mark on the app's background. No extra dependency. -->
+    <style name="Theme.NexVoraMotion" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/nv_background</item>
+        <item name="android:statusBarColor">@color/nv_background</item>
+        <item name="android:navigationBarColor">@color/nv_background</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowSplashScreenBackground">@color/nv_background</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+    </style>
+</resources>

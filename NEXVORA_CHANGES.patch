@@ -1,0 +1,645 @@
+diff -ruN '--exclude=.git' baseline-original-tree/NOTICE capcraft-android-main/NOTICE
+--- baseline-original-tree/NOTICE	2026-11-10 13:27:31.371316968 +0000
++++ capcraft-android-main/NOTICE	2026-11-10 13:28:24.432253164 +0000
+@@ -1,3 +1,12 @@
++NexVora Motion Studio
++Modified version of CapCraft for Android. Modifications Copyright (c) 2026 NexVora Lab's Ofc (developer:
++Prince AR Abdur Rahman), licensed under the GNU Affero General Public License, version 3 or (at your option) any
++later version. See MODIFICATION_REPORT.md for what was changed.
++
++The original notice follows unchanged.
++
++----------------------------------------------------------------------
++
+ CapCraft for Android
+ Copyright (c) 2026 ArtCraft Team and the CapCraft contributors.
+ 
+diff -ruN '--exclude=.git' baseline-original-tree/README.md capcraft-android-main/README.md
+--- baseline-original-tree/README.md	2026-11-10 13:27:31.371326960 +0000
++++ capcraft-android-main/README.md	2026-11-10 13:28:24.433016767 +0000
+@@ -1,4 +1,27 @@
+ <p align="center">
++  <img src="docs/images/nexvora-512.png" alt="NexVora Motion Studio's app icon" width="128">
++</p>
++
++<h1 align="center">NexVora Motion Studio</h1>
++
++<p align="center">
++  <b>A professional Android video editor.</b><br>
++  Developed by Prince AR Abdur Rahman · Published by NexVora Lab's Ofc<br>
++  © 2026 NexVora Lab's Ofc. All Rights Reserved.
++</p>
++
++> **Origin and licence.** NexVora Motion Studio 1.0.0 (`com.nexvora.motionstudio`) is a modified version of
++> [CapCraft for Android](https://github.com/artcraft-android/capcraft-android) (ArtCraft Team and the CapCraft
++> contributors), itself built on the engine of [Concat](https://github.com/jub0t/concat) (Jareer Abdullah and the
++> Concat contributors). It is free software under the GNU Affero General Public License, version 3 or later
++> (`LICENSE`). The changes are listed in `MODIFICATION_REPORT.md`; build steps are in `BUILD_INSTRUCTIONS.md`.
++> The rest of this file is the original CapCraft README, kept for the feature overview and engine build notes;
++> its screenshots show the original CapCraft interface. Where it says CapCraft, the package, native library and
++> source layout still carry that name on purpose (see the report).
++
++---
++
++<p align="center">
+   <img src="docs/images/capcraft-512.png" alt="CapCraft's app icon" width="128">
+ </p>
+ 
+diff -ruN '--exclude=.git' baseline-original-tree/THIRD_PARTY_NOTICES.md capcraft-android-main/THIRD_PARTY_NOTICES.md
+--- baseline-original-tree/THIRD_PARTY_NOTICES.md	2026-11-10 13:27:31.371339145 +0000
++++ capcraft-android-main/THIRD_PARTY_NOTICES.md	2026-11-10 13:28:24.432635725 +0000
+@@ -262,3 +262,13 @@
+ and is embedded in the app; each card is the effect's own shader run over
+ it on the GPU when the app first needs the card (`concat-host`'s
+ `cards.rs`).
++
++
++## Software foundation of NexVora Motion Studio
++
++NexVora Motion Studio is a modified version of CapCraft for Android
++(https://github.com/artcraft-android/capcraft-android, AGPL-3.0-or-later, Copyright (c) 2026 ArtCraft Team and the
++CapCraft contributors), which is built on Concat (https://github.com/jub0t/concat, AGPL-3.0-or-later, Copyright Jareer
++Abdullah and the Concat contributors). All notices above, and those in `NOTICE` and
++`src/crates/capcraft-android/NOTICE.md`, apply to NexVora Motion Studio as they did to CapCraft. NexVora added no new
++third-party dependencies and no new third-party assets: the launcher icon and logo are original artwork.
+Binary files baseline-original-tree/docs/images/nexvora-512.png and capcraft-android-main/docs/images/nexvora-512.png differ
+diff -ruN '--exclude=.git' baseline-original-tree/src/crates/capcraft-android/NOTICE.md capcraft-android-main/src/crates/capcraft-android/NOTICE.md
+--- baseline-original-tree/src/crates/capcraft-android/NOTICE.md	2026-11-10 13:27:31.373004132 +0000
++++ capcraft-android-main/src/crates/capcraft-android/NOTICE.md	2026-11-10 13:28:24.431951181 +0000
+@@ -1,3 +1,18 @@
++# NexVora Motion Studio: notices
++
++NexVora Motion Studio (version 1.0.0, application ID `com.nexvora.motionstudio`) is developed by Prince AR Abdur
++Rahman and published by NexVora Lab's Ofc. (c) 2026 NexVora Lab's Ofc. All Rights Reserved for the NexVora-authored
++changes: the branding, the launcher icon and logo, the colour palette and theme, and the About screen.
++
++It is a modified version of **CapCraft for Android** (Copyright (c) 2026 ArtCraft Team and the CapCraft contributors,
++https://github.com/artcraft-android/capcraft-android), which is built on the engine of **Concat** (Copyright Jareer
++Abdullah and the Concat contributors, https://github.com/jub0t/concat). NexVora Motion Studio is not the original
++work of NexVora Lab's Ofc. The whole is licensed under the GNU Affero General Public License, version 3 or (at your
++option) any later version (`LICENSE`); the NexVora changes are offered under the same licence. The original notices
++below are kept as they were. The changes are listed in `MODIFICATION_REPORT.md` in the source.
++
++---
++
+ # CapCraft for Android: notices
+ 
+ CapCraft is free software: you can redistribute it and/or modify it under the terms of the GNU
+@@ -14,7 +29,7 @@
+ |---|---|---|
+ | Lucide icons (Lucide Contributors, portions Cole Bemis / Feather) | ISC (`LICENSE-lucide.txt`) | the app's icons, as vector paths |
+ | Material Symbols (Google) | Apache-2.0 (`LICENSE-material-symbols.txt`) | some of the app's icons, as vector paths |
+-| Material icons' camera glyph (Google) | Apache-2.0 (`LICENSE-material-symbols.txt`) | the launcher icon, redrawn with its body hollow |
++| Material icons' camera glyph (Google) | Apache-2.0 (`LICENSE-material-symbols.txt`) | CapCraft's original launcher icon; NexVora Motion Studio replaces it with its own artwork |
+ | Kotlin standard library and coroutines (JetBrains) | Apache-2.0 | the app's code |
+ | AndroidX, Jetpack Compose, Material 3 (Google) | Apache-2.0 | the app's interface |
+ | JNA (Java Native Access) | Apache-2.0 | calling the engine from Kotlin |
+diff -ruN '--exclude=.git' baseline-original-tree/src/crates/capcraft-android/android/app/build.gradle.kts capcraft-android-main/src/crates/capcraft-android/android/app/build.gradle.kts
+--- baseline-original-tree/src/crates/capcraft-android/android/app/build.gradle.kts	2026-11-10 13:27:31.373093204 +0000
++++ capcraft-android-main/src/crates/capcraft-android/android/app/build.gradle.kts	2026-11-10 13:27:31.434291304 +0000
+@@ -253,7 +253,9 @@
+     ndkVersion = "29.0.14206865"
+ 
+     defaultConfig {
+-        applicationId = "io.github.artcraftandroid.capcraft"
++        // The installed identity. The Kotlin namespace above stays the original one on purpose: the Rust library
++        // exports its JNI entry point under that package (see src/android.rs) and UniFFI generates its bindings there.
++        applicationId = "com.nexvora.motionstudio"
+         minSdk = minApi
+         targetSdk = 36
+         versionCode = appVersionCode
+diff -ruN '--exclude=.git' baseline-original-tree/src/crates/capcraft-android/android/app/src/main/AndroidManifest.xml capcraft-android-main/src/crates/capcraft-android/android/app/src/main/AndroidManifest.xml
+--- baseline-original-tree/src/crates/capcraft-android/android/app/src/main/AndroidManifest.xml	2026-11-10 13:27:31.373142773 +0000
++++ capcraft-android-main/src/crates/capcraft-android/android/app/src/main/AndroidManifest.xml	2026-11-10 13:27:31.437063139 +0000
+@@ -6,7 +6,7 @@
+     <!-- voice-overs -->
+     <uses-permission android:name="android.permission.RECORD_AUDIO" />
+     <!-- the media picker's grid of the phone's videos and photos, and files other apps open with
+-         CapCraft by path; refused, the system's picker is used instead -->
++         NexVora Motion Studio by path; refused, the system's picker is used instead -->
+     <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+     <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED" />
+@@ -26,7 +26,7 @@
+         android:label="@string/app_name"
+         android:roundIcon="@mipmap/ic_launcher"
+         android:supportsRtl="true"
+-        android:theme="@style/Theme.CapCraft">
++        android:theme="@style/Theme.NexVoraMotion">
+ 
+         <activity
+             android:name=".MainActivity"
+@@ -39,7 +39,7 @@
+                 <action android:name="android.intent.action.MAIN" />
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+-            <!-- videos and photos shared to CapCraft start a new project -->
++            <!-- videos and photos shared to NexVora Motion Studio start a new project -->
+             <intent-filter android:label="@string/share_label">
+                 <action android:name="android.intent.action.SEND" />
+                 <action android:name="android.intent.action.SEND_MULTIPLE" />
+diff -ruN '--exclude=.git' baseline-original-tree/src/crates/capcraft-android/android/app/src/main/java/io/github/artcraftandroid/capcraft/ui/Theme.kt capcraft-android-main/src/crates/capcraft-android/android/app/src/main/java/io/github/artcraftandroid/capcraft/ui/Theme.kt
+--- baseline-original-tree/src/crates/capcraft-android/android/app/src/main/java/io/github/artcraftandroid/capcraft/ui/Theme.kt	2026-11-10 13:27:31.373300470 +0000
++++ capcraft-android-main/src/crates/capcraft-android/android/app/src/main/java/io/github/artcraftandroid/capcraft/ui/Theme.kt	2026-11-10 13:27:31.438671259 +0000
+@@ -8,51 +8,53 @@
+ import androidx.compose.ui.text.font.FontWeight
+ import androidx.compose.ui.unit.sp
+ 
+-/** CapCraft's palette: a black editor with one cyan accent. */
++/** NexVora Motion's palette: a deep midnight editor with cyan and electric-purple accents. */
+ object Palette {
+-    val Black = Color(0xFF000000)
++    val Black = Color(0xFF090B12)
+     /** The editor's chrome: top bar, timeline and dock. */
+-    val Chrome = Color(0xFF0D0D0D)
++    val Chrome = Color(0xFF0D101A)
+     /** Panels and sheets over the editor. */
+-    val Panel = Color(0xFF1A1A1A)
++    val Panel = Color(0xFF111522)
+     /** Cards and raised rows. */
+-    val Card = Color(0xFF242424)
+-    val CardPressed = Color(0xFF2E2E2E)
+-    val Divider = Color(0xFF2A2A2A)
+-    val Accent = Color(0xFF00CAE0)
++    val Card = Color(0xFF171D2B)
++    val CardPressed = Color(0xFF212839)
++    val Divider = Color(0xFF283044)
++    val Accent = Color(0xFF00D5FF)
++    /** The second accent: electric purple. */
++    val Purple = Color(0xFF8957FF)
+     /** Words on the accent: the Export button's dark ink. */
+-    val OnAccent = Color(0xFF1E2129)
++    val OnAccent = Color(0xFF090B12)
+     /** The editor's top part: top bar, preview surround and play bar. */
+-    val EditorTop = Color(0xFF141414)
++    val EditorTop = Color(0xFF0E111B)
+     /** The timeline and the bottom bar under it. */
+-    val Timeline = Color(0xFF1C1C1C)
++    val Timeline = Color(0xFF131827)
+     /** The bottom bar while a clip is selected, and the panels. */
+-    val DockSelected = Color(0xFF262626)
++    val DockSelected = Color(0xFF171D2B)
+     /** The back button of a bottom bar level. */
+-    val DockBack = Color(0xFF3C3C3C)
++    val DockBack = Color(0xFF2A3247)
+     /** Labels and icons in the bottom bar. */
+-    val DockText = Color(0xFFD4D4D4)
++    val DockText = Color(0xFFD5DBE8)
+     /** The resolution chip in the top bar. */
+-    val Chip = Color(0xFF292A2C)
++    val Chip = Color(0xFF1D2333)
+     /** The "add audio" / "add text" rows and their tiles. */
+-    val HintRow = Color(0xFF262626)
+-    val HintIcon = Color(0xFF6B6B70)
+-    val Text = Color(0xFFFFFFFF)
+-    val TextSecondary = Color(0xFFA3A3A3)
+-    val TextTertiary = Color(0xFF6B6B6B)
+-    val Disabled = Color(0xFF4D4D4D)
++    val HintRow = Color(0xFF171D2B)
++    val HintIcon = Color(0xFF6C7691)
++    val Text = Color(0xFFF7F9FF)
++    val TextSecondary = Color(0xFF9AA5B8)
++    val TextTertiary = Color(0xFF677189)
++    val Disabled = Color(0xFF454D60)
+     /** Timeline clip colours by row. */
+     val TextClip = Color(0xFFE67300)
+     /** Captions, a lighter amber than titles. */
+     val CaptionClip = Color(0xFFDA9208)
+-    val EffectClip = Color(0xFF7E61EE)
++    val EffectClip = Color(0xFF8957FF)
+     val FilterClip = Color(0xFFE36BBF)
+     val StickerClip = Color(0xFFDCB108)
+     val AudioClip = Color(0xFF2A5256)
+     /** Beat marks on sound clips. */
+     val Beat = Color(0xFFFFD60A)
+-    val AudioWave = Color(0xFF00B2C2)
+-    val OverlayClip = Color(0xFF2B2B2B)
++    val AudioWave = Color(0xFF00B8DB)
++    val OverlayClip = Color(0xFF232A3C)
+     val Danger = Color(0xFFFF4D4F)
+ }
+ 
+@@ -75,6 +77,8 @@
+             surface = Palette.Panel,
+             onSurface = Palette.Text,
+             onBackground = Palette.Text,
++            secondary = Palette.Purple,
++            outline = Palette.Divider,
+         ),
+         content = content,
+     )
+diff -ruN '--exclude=.git' baseline-original-tree/src/crates/capcraft-android/android/app/src/main/java/io/github/artcraftandroid/capcraft/ui/common/MediaPicker.kt capcraft-android-main/src/crates/capcraft-android/android/app/src/main/java/io/github/artcraftandroid/capcraft/ui/common/MediaPicker.kt
+--- baseline-original-tree/src/crates/capcraft-android/android/app/src/main/java/io/github/artcraftandroid/capcraft/ui/common/MediaPicker.kt	2026-11-10 13:27:31.373331071 +0000
++++ capcraft-android-main/src/crates/capcraft-android/android/app/src/main/java/io/github/artcraftandroid/capcraft/ui/common/MediaPicker.kt	2026-11-10 13:27:31.441019084 +0000
+@@ -312,7 +312,7 @@
+                 verticalAlignment = Alignment.CenterVertically,
+             ) {
+                 Text(
+-                    "CapCraft can see only the photos and videos you chose",
++                    "NexVora Motion can see only the photos and videos you chose",
+                     style = Type.Small.copy(color = Palette.TextSecondary),
+                     modifier = Modifier.weight(1f),
+                 )
+diff -ruN '--exclude=.git' baseline-original-tree/src/crates/capcraft-android/android/app/src/main/java/io/github/artcraftandroid/capcraft/ui/editor/EditorViewModel.kt capcraft-android-main/src/crates/capcraft-android/android/app/src/main/java/io/github/artcraftandroid/capcraft/ui/editor/EditorViewModel.kt
+--- baseline-original-tree/src/crates/capcraft-android/android/app/src/main/java/io/github/artcraftandroid/capcraft/ui/editor/EditorViewModel.kt	2026-11-10 13:27:31.373426096 +0000
++++ capcraft-android-main/src/crates/capcraft-android/android/app/src/main/java/io/github/artcraftandroid/capcraft/ui/editor/EditorViewModel.kt	2026-11-10 13:27:31.441321209 +0000
+@@ -903,7 +903,7 @@
+             val result = withContext(Threads.commands) { runCatching { s.captionsSrt() } }
+             result.onSuccess { text ->
+                 captionsOut = text
+-                save("CapCraft_" + java.text.SimpleDateFormat("yyyyMMdd_HHmmss", java.util.Locale.US).format(java.util.Date()) + ".srt")
++                save("NexVora_Motion_" + java.text.SimpleDateFormat("yyyyMMdd_HHmmss", java.util.Locale.US).format(java.util.Date()) + ".srt")
+             }.onFailure { fail(it) }
+         }
+     }
+diff -ruN '--exclude=.git' baseline-original-tree/src/crates/capcraft-android/android/app/src/main/java/io/github/artcraftandroid/capcraft/ui/export/ExportScreen.kt capcraft-android-main/src/crates/capcraft-android/android/app/src/main/java/io/github/artcraftandroid/capcraft/ui/export/ExportScreen.kt
+--- baseline-original-tree/src/crates/capcraft-android/android/app/src/main/java/io/github/artcraftandroid/capcraft/ui/export/ExportScreen.kt	2026-11-10 13:27:31.374152376 +0000
++++ capcraft-android-main/src/crates/capcraft-android/android/app/src/main/java/io/github/artcraftandroid/capcraft/ui/export/ExportScreen.kt	2026-11-10 13:27:31.440729609 +0000
+@@ -142,7 +142,7 @@
+         val size = exportSize(t.width, t.height, res.toUInt())
+         val kbps = exportKbps(vm, size[0].toInt(), size[1].toInt())
+         val gif = vm.exportGif
+-        val name = "CapCraft_" + SimpleDateFormat("yyyyMMdd_HHmmss", Locale.US).format(Date()) + if (gif) ".gif" else ".mp4"
++        val name = "NexVora_Motion_" + SimpleDateFormat("yyyyMMdd_HHmmss", Locale.US).format(Date()) + if (gif) ".gif" else ".mp4"
+         val out = withContext(Threads.commands) { exportPath(name) }
+         val appContext = context.applicationContext
+         val listener = object : ExportListener {
+@@ -265,7 +265,7 @@
+                         Box(Modifier.weight(1f).height(1.dp).background(Color(0x33FFFFFF)))
+                         Glyph(LucideIcons.Lightbulb, Palette.TextSecondary, size = 16.dp, modifier = Modifier.padding(horizontal = 8.dp))
+                         Text(
+-                            "You can leave CapCraft while the video saves",
++                            "You can leave NexVora Motion while the video saves",
+                             style = Type.Small.copy(textAlign = TextAlign.Center),
+                             modifier = Modifier.width(240.dp),
+                         )
+@@ -330,13 +330,13 @@
+     }
+ }
+ 
+-/** Saves a still as a JPEG in Pictures/CapCraft. */
++/** Saves a still as a JPEG in Pictures/NexVora Motion. */
+ private fun publishPhoto(context: Context, picture: Bitmap): Uri? = runCatching {
+-    val name = "CapCraft_" + SimpleDateFormat("yyyyMMdd_HHmmss", Locale.US).format(Date()) + ".jpg"
++    val name = "NexVora_Motion_" + SimpleDateFormat("yyyyMMdd_HHmmss", Locale.US).format(Date()) + ".jpg"
+     val values = ContentValues().apply {
+         put(MediaStore.Images.Media.DISPLAY_NAME, name)
+         put(MediaStore.Images.Media.MIME_TYPE, "image/jpeg")
+-        put(MediaStore.Images.Media.RELATIVE_PATH, Environment.DIRECTORY_PICTURES + "/CapCraft")
++        put(MediaStore.Images.Media.RELATIVE_PATH, Environment.DIRECTORY_PICTURES + "/NexVora Motion")
+         put(MediaStore.Images.Media.IS_PENDING, 1)
+     }
+     val resolver = context.contentResolver
+@@ -349,12 +349,12 @@
+     uri
+ }.getOrNull()
+ 
+-/** Copies a finished GIF into Pictures/CapCraft and deletes the cache copy. */
++/** Copies a finished GIF into Pictures/NexVora Motion and deletes the cache copy. */
+ private fun publishGif(context: Context, file: File): Uri? = runCatching {
+     val values = ContentValues().apply {
+         put(MediaStore.Images.Media.DISPLAY_NAME, file.name)
+         put(MediaStore.Images.Media.MIME_TYPE, "image/gif")
+-        put(MediaStore.Images.Media.RELATIVE_PATH, Environment.DIRECTORY_PICTURES + "/CapCraft")
++        put(MediaStore.Images.Media.RELATIVE_PATH, Environment.DIRECTORY_PICTURES + "/NexVora Motion")
+         put(MediaStore.Images.Media.IS_PENDING, 1)
+     }
+     val resolver = context.contentResolver
+@@ -368,12 +368,12 @@
+     uri
+ }.getOrNull()
+ 
+-/** Copies the finished file into Movies/CapCraft and deletes the cache copy. */
++/** Copies the finished file into Movies/NexVora Motion and deletes the cache copy. */
+ private fun publish(context: Context, file: File): Uri? = runCatching {
+     val values = ContentValues().apply {
+         put(MediaStore.Video.Media.DISPLAY_NAME, file.name)
+         put(MediaStore.Video.Media.MIME_TYPE, "video/mp4")
+-        put(MediaStore.Video.Media.RELATIVE_PATH, Environment.DIRECTORY_MOVIES + "/CapCraft")
++        put(MediaStore.Video.Media.RELATIVE_PATH, Environment.DIRECTORY_MOVIES + "/NexVora Motion")
+         put(MediaStore.Video.Media.IS_PENDING, 1)
+     }
+     val resolver = context.contentResolver
+diff -ruN '--exclude=.git' baseline-original-tree/src/crates/capcraft-android/android/app/src/main/java/io/github/artcraftandroid/capcraft/ui/home/HomeScreen.kt capcraft-android-main/src/crates/capcraft-android/android/app/src/main/java/io/github/artcraftandroid/capcraft/ui/home/HomeScreen.kt
+--- baseline-original-tree/src/crates/capcraft-android/android/app/src/main/java/io/github/artcraftandroid/capcraft/ui/home/HomeScreen.kt	2026-11-10 13:27:31.374176789 +0000
++++ capcraft-android-main/src/crates/capcraft-android/android/app/src/main/java/io/github/artcraftandroid/capcraft/ui/home/HomeScreen.kt	2026-11-10 13:27:31.439960438 +0000
+@@ -148,21 +148,21 @@
+     Background = Palette.Black,
+     Ink = Palette.Text,
+     OnInk = Palette.Black,
+-    Muted = Color(0xFF9A9BA1),
++    Muted = Color(0xFF9AA5B8),
+     Hairline = Palette.Divider,
+     Tile = Palette.Card,
+-    Card = Color(0xC71A1A1A),
++    Card = Color(0xC7171D2B),
+     Sheet = Palette.Panel,
+     Field = Palette.CardPressed,
+     Grabber = Palette.DockBack,
+-    Ring = Color(0xFF5C5C60),
++    Ring = Color(0xFF4A5470),
+     More = Palette.CardPressed,
+-    Wash = listOf(Color(0xFF15293A), Color(0xFF0B0B0D)),
+-    Round = Color(0xFF262A30),
++    Wash = listOf(Color(0xFF14233A), Color(0xFF090B12)),
++    Round = Color(0xFF212839),
+ )
+ 
+ private val Home: HomeColors
+-    @Composable @ReadOnlyComposable get() = if (isSystemInDarkTheme()) DarkHome else LightHome
++    @Composable @ReadOnlyComposable get() = DarkHome // NexVora Motion is a dark, cinematic app; the light palette stays defined above for reference
+ 
+ @Composable
+ @ReadOnlyComposable
+@@ -552,7 +552,7 @@
+                 }
+                 Spacer(Modifier.height(176.dp))
+                 Column(Modifier.padding(horizontal = 16.dp).clickable(onClick = onNewVideo)) {
+-                    Text("Ready when you are", style = ink(14f, color = Color.White.copy(alpha = 0.92f)))
++                    Text("NexVora Motion Studio", style = ink(14f, color = Color.White.copy(alpha = 0.92f)))
+                     Spacer(Modifier.height(2.dp))
+                     Row(verticalAlignment = Alignment.CenterVertically) {
+                         Text("Make your next video", style = ink(21f, FontWeight.Bold, Color.White))
+@@ -673,7 +673,7 @@
+     Canvas(modifier) {
+         val w = size.width
+         val h = size.height
+-        drawRect(Brush.linearGradient(listOf(Color(0xFF27B9D9), Color(0xFF5C9CF0), Color(0xFF8B7CF2)), Offset.Zero, Offset(w, h * 0.8f)))
++        drawRect(Brush.linearGradient(listOf(Color(0xFF0A7E9C), Color(0xFF3B4FC4), Color(0xFF8957FF)), Offset.Zero, Offset(w, h * 0.8f)))
+         drawCircle(Brush.radialGradient(listOf(Color(0x66FFFFFF), Color.Transparent), Offset(w * 0.85f, h * 0.12f), w * 0.5f), w * 0.5f, Offset(w * 0.85f, h * 0.12f))
+         drawCircle(Brush.radialGradient(listOf(Color(0x40FFE4F2), Color.Transparent), Offset(w * 0.1f, h * 0.45f), w * 0.45f), w * 0.45f, Offset(w * 0.1f, h * 0.45f))
+         // a strip of frames running up the picture
+@@ -1042,7 +1042,7 @@
+         Column(Modifier.fillMaxWidth().verticalScroll(rememberScrollState())) {
+             SettingRow("Clear cache", cache?.let(::size) ?: "") { clearing = true }
+             SettingRow("Licences", null, onLicences)
+-            SettingRow("About CapCraft", null, onAbout)
++            SettingRow("About NexVora Motion Studio", null, onAbout)
+             SettingRow("Version", version, null)
+         }
+     }
+@@ -1096,31 +1096,49 @@
+ /** Where the app's source lives. */
+ private const val SOURCE_URL = "https://github.com/artcraft-android/capcraft-android"
+ 
+-/** What CapCraft is, who made the engine under it, and that it is nobody else's app. */
++/** What NexVora Motion Studio is, who made it, and the free software it stands on. */
+ @Composable
+ private fun AboutScreen(onBack: () -> Unit) {
+     val context = LocalContext.current
+     val version = remember { appVersion(context) }
+-    Page("About CapCraft", onBack) {
+-        Column(Modifier.fillMaxWidth().padding(24.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+-            Spacer(Modifier.height(24.dp))
+-            Text("CapCraft", style = ink(26f, FontWeight.Bold))
++    val centered = androidx.compose.ui.text.style.TextAlign.Center
++    Page("About NexVora Motion Studio", onBack) {
++        Column(Modifier.fillMaxWidth().verticalScroll(rememberScrollState()).padding(24.dp), horizontalAlignment = Alignment.CenterHorizontally) {
++            Spacer(Modifier.height(16.dp))
++            Image(
++                androidx.compose.ui.res.painterResource(io.github.artcraftandroid.capcraft.R.drawable.nexvora_logo),
++                contentDescription = "NexVora Motion Studio logo",
++                modifier = Modifier.size(96.dp),
++            )
++            Spacer(Modifier.height(16.dp))
++            Text("NexVora Motion Studio", style = ink(26f, FontWeight.Bold))
+             Spacer(Modifier.height(6.dp))
+             Text("Version $version", style = ink(13f, color = Home.Muted))
+-            Spacer(Modifier.height(28.dp))
++            Spacer(Modifier.height(24.dp))
++            Text("Developer: Prince AR Abdur Rahman", style = ink(14f, FontWeight.Medium))
++            Spacer(Modifier.height(4.dp))
++            Text("Publisher: NexVora Lab's Ofc", style = ink(14f, FontWeight.Medium))
++            Spacer(Modifier.height(20.dp))
++            Text("Developed by Prince AR Abdur Rahman", style = ink(13f, color = Home.Muted).copy(textAlign = centered))
++            Text("Published by NexVora Lab's Ofc", style = ink(13f, color = Home.Muted).copy(textAlign = centered))
++            Text("\u00A9 2026 NexVora Lab's Ofc. All Rights Reserved.", style = ink(13f, color = Home.Muted).copy(textAlign = centered))
++            Spacer(Modifier.height(24.dp))
+             Text(
+-                "A free video editor that keeps your work on your phone. Built on Concat's engine; free " +
+-                    "software under the GNU Affero General Public License, version 3 or later.",
+-                style = ink(13f, color = Home.Muted).copy(textAlign = androidx.compose.ui.text.style.TextAlign.Center),
++                "A professional video editor that keeps your work on your phone. NexVora Motion Studio is a modified " +
++                    "version of CapCraft for Android (ArtCraft Team and the CapCraft contributors), which is built on the " +
++                    "engine of Concat (Jareer Abdullah and the Concat contributors). It is free software under the GNU " +
++                    "Affero General Public License, version 3 or later: the original copyright and licence notices are kept " +
++                    "and appear under Licences.",
++                style = ink(13f, color = Home.Muted).copy(textAlign = centered),
+             )
+             Spacer(Modifier.height(16.dp))
+             Text(
+                 "Not affiliated with or endorsed by ByteDance or CapCut.",
+-                style = ink(13f, color = Home.Muted).copy(textAlign = androidx.compose.ui.text.style.TextAlign.Center),
++                style = ink(13f, color = Home.Muted).copy(textAlign = centered),
+             )
+-            Spacer(Modifier.height(28.dp))
++            Spacer(Modifier.height(24.dp))
+             // the source, as the licence asks of every copy handed on
+-            Text("Source code", style = ink(13f, color = Home.Muted))
++            Text("Original source code (CapCraft)", style = ink(13f, color = Home.Muted))
+             Spacer(Modifier.height(4.dp))
+             Text(
+                 SOURCE_URL.removePrefix("https://"),
+@@ -1162,7 +1180,7 @@
+ private fun LicencesScreen(onBack: () -> Unit) {
+     val context = LocalContext.current
+     val files = listOf(
+-        "NOTICE.md" to "CapCraft",
++        "NOTICE.md" to "NexVora Motion Studio and CapCraft",
+         "LICENSE.txt" to "GNU Affero General Public License",
+         "THIRD_PARTY_NOTICES.md" to "Engine third-party notices",
+         "LICENSE-lucide.txt" to "Lucide icons",
+diff -ruN '--exclude=.git' baseline-original-tree/src/crates/capcraft-android/android/app/src/main/res/drawable/ic_launcher_background.xml capcraft-android-main/src/crates/capcraft-android/android/app/src/main/res/drawable/ic_launcher_background.xml
+--- baseline-original-tree/src/crates/capcraft-android/android/app/src/main/res/drawable/ic_launcher_background.xml	2026-11-10 13:27:31.374227417 +0000
++++ capcraft-android-main/src/crates/capcraft-android/android/app/src/main/res/drawable/ic_launcher_background.xml	2026-11-10 13:27:59.045098618 +0000
+@@ -1,11 +1,14 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<!-- CapCraft's icon: a black tile. -->
+-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+-    android:width="108dp"
+-    android:height="108dp"
+-    android:viewportWidth="108"
+-    android:viewportHeight="108">
+-    <path
+-        android:fillColor="#FF000000"
+-        android:pathData="M0,0h108v108h-108z" />
++<!-- NexVora Motion's icon background: deep midnight with a faint violet glow at the lower right. -->
++<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
++    android:width="108dp" android:height="108dp" android:viewportWidth="108" android:viewportHeight="108">
++    <path android:pathData="M0,0h108v108h-108z">
++        <aapt:attr name="android:fillColor">
++            <gradient android:type="linear" android:startX="0" android:startY="0" android:endX="108" android:endY="108">
++                <item android:offset="0" android:color="#FF090B12" />
++                <item android:offset="0.65" android:color="#FF0D1220" />
++                <item android:offset="1" android:color="#FF1A1538" />
++            </gradient>
++        </aapt:attr>
++    </path>
+ </vector>
+diff -ruN '--exclude=.git' baseline-original-tree/src/crates/capcraft-android/android/app/src/main/res/drawable/ic_launcher_foreground.xml capcraft-android-main/src/crates/capcraft-android/android/app/src/main/res/drawable/ic_launcher_foreground.xml
+--- baseline-original-tree/src/crates/capcraft-android/android/app/src/main/res/drawable/ic_launcher_foreground.xml	2026-11-10 13:27:31.374237606 +0000
++++ capcraft-android-main/src/crates/capcraft-android/android/app/src/main/res/drawable/ic_launcher_foreground.xml	2026-11-10 13:27:59.044399359 +0000
+@@ -1,15 +1,19 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<!-- CapCraft's icon: a camera (after Google's Material icons, Apache-2.0), its body hollow. -->
+-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+-    android:width="108dp"
+-    android:height="108dp"
+-    android:viewportWidth="108"
+-    android:viewportHeight="108">
+-    <path
+-        android:fillColor="#FFFFFFFF"
+-        android:fillType="evenOdd"
+-        android:pathData="M37,37.25 H63 A4,4 0 0,1 67,41.25 V66.75 A4,4 0 0,1 63,70.75 H37 A4,4 0 0,1 33,66.75 V41.25 A4,4 0 0,1 37,37.25 Z M38.5,41.75 H61.5 A1,1 0 0,1 62.5,42.75 V65.25 A1,1 0 0,1 61.5,66.25 H38.5 A1,1 0 0,1 37.5,65.25 V42.75 A1,1 0 0,1 38.5,41.75 Z" />
+-    <path
+-        android:fillColor="#FFFFFFFF"
+-        android:pathData="M66.5,50.25 L75,42.25 L75,65.75 L66.5,57.75 Z" />
++<!-- NexVora Motion's mark: an N inside cinematic frame corners, cyan to electric purple. Original artwork. -->
++<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
++    android:width="108dp" android:height="108dp" android:viewportWidth="108" android:viewportHeight="108">
++    <!-- cinematic frame: four corner brackets -->
++    <path android:strokeColor="#FF00D5FF" android:strokeWidth="2.5" android:strokeLineCap="round" android:strokeLineJoin="round"
++        android:pathData="M26,35 V26 H35 M73,26 H82 V35 M82,73 V82 H73 M35,82 H26 V73" />
++    <!-- N: two stems and a diagonal -->
++    <path android:fillColor="#FF00D5FF" android:pathData="M34,34 h7 v40 h-7 z" />
++    <path android:fillColor="#FF8957FF" android:pathData="M67,34 h7 v40 h-7 z" />
++    <path android:pathData="M37,34 L45,34 L71,74 L63,74 Z">
++        <aapt:attr name="android:fillColor">
++            <gradient android:type="linear" android:startX="37" android:startY="34" android:endX="71" android:endY="74">
++                <item android:offset="0" android:color="#FF00D5FF" />
++                <item android:offset="1" android:color="#FF8957FF" />
++            </gradient>
++        </aapt:attr>
++    </path>
+ </vector>
+diff -ruN '--exclude=.git' baseline-original-tree/src/crates/capcraft-android/android/app/src/main/res/drawable/ic_launcher_monochrome.xml capcraft-android-main/src/crates/capcraft-android/android/app/src/main/res/drawable/ic_launcher_monochrome.xml
+--- baseline-original-tree/src/crates/capcraft-android/android/app/src/main/res/drawable/ic_launcher_monochrome.xml	1970-01-01 00:00:00.000000000 +0000
++++ capcraft-android-main/src/crates/capcraft-android/android/app/src/main/res/drawable/ic_launcher_monochrome.xml	2026-11-10 13:27:59.045261696 +0000
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="utf-8"?>
++<!-- Themed-icon (Android 13+) version of the NexVora Motion mark: one colour, the system tints it. -->
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++    android:width="108dp" android:height="108dp" android:viewportWidth="108" android:viewportHeight="108">
++    <path android:strokeColor="#FFFFFFFF" android:strokeWidth="2.5" android:strokeLineCap="round" android:strokeLineJoin="round"
++        android:pathData="M26,35 V26 H35 M73,26 H82 V35 M82,73 V82 H73 M35,82 H26 V73" />
++    <path android:fillColor="#FFFFFFFF" android:pathData="M34,34 h7 v40 h-7 z M67,34 h7 v40 h-7 z M37,34 L45,34 L71,74 L63,74 Z" />
++</vector>
+diff -ruN '--exclude=.git' baseline-original-tree/src/crates/capcraft-android/android/app/src/main/res/drawable/nexvora_logo.xml capcraft-android-main/src/crates/capcraft-android/android/app/src/main/res/drawable/nexvora_logo.xml
+--- baseline-original-tree/src/crates/capcraft-android/android/app/src/main/res/drawable/nexvora_logo.xml	1970-01-01 00:00:00.000000000 +0000
++++ capcraft-android-main/src/crates/capcraft-android/android/app/src/main/res/drawable/nexvora_logo.xml	2026-11-10 13:27:59.045744495 +0000
+@@ -0,0 +1,21 @@
++<?xml version="1.0" encoding="utf-8"?>
++<!-- In-app and About logo: the mark on a rounded midnight tile. -->
++<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
++    android:width="108dp" android:height="108dp" android:viewportWidth="108" android:viewportHeight="108">
++    <path android:fillColor="#FF111522" android:strokeColor="#FF283044" android:strokeWidth="1"
++        android:pathData="M24,6 H84 A18,18 0 0 1 102,24 V84 A18,18 0 0 1 84,102 H24 A18,18 0 0 1 6,84 V24 A18,18 0 0 1 24,6 Z" />
++    <!-- cinematic frame: four corner brackets -->
++    <path android:strokeColor="#FF00D5FF" android:strokeWidth="2.5" android:strokeLineCap="round" android:strokeLineJoin="round"
++        android:pathData="M26,35 V26 H35 M73,26 H82 V35 M82,73 V82 H73 M35,82 H26 V73" />
++    <!-- N: two stems and a diagonal -->
++    <path android:fillColor="#FF00D5FF" android:pathData="M34,34 h7 v40 h-7 z" />
++    <path android:fillColor="#FF8957FF" android:pathData="M67,34 h7 v40 h-7 z" />
++    <path android:pathData="M37,34 L45,34 L71,74 L63,74 Z">
++        <aapt:attr name="android:fillColor">
++            <gradient android:type="linear" android:startX="37" android:startY="34" android:endX="71" android:endY="74">
++                <item android:offset="0" android:color="#FF00D5FF" />
++                <item android:offset="1" android:color="#FF8957FF" />
++            </gradient>
++        </aapt:attr>
++    </path>
++</vector>
+diff -ruN '--exclude=.git' baseline-original-tree/src/crates/capcraft-android/android/app/src/main/res/mipmap-anydpi/ic_launcher.xml capcraft-android-main/src/crates/capcraft-android/android/app/src/main/res/mipmap-anydpi/ic_launcher.xml
+--- baseline-original-tree/src/crates/capcraft-android/android/app/src/main/res/mipmap-anydpi/ic_launcher.xml	2026-11-10 13:27:31.374255108 +0000
++++ capcraft-android-main/src/crates/capcraft-android/android/app/src/main/res/mipmap-anydpi/ic_launcher.xml	2026-11-10 13:27:59.045592182 +0000
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<!-- CapCraft's icon: a hollow camera in white on black. -->
++<!-- NexVora Motion Studio's launcher icon (adaptive): original artwork, not derived from the CapCraft icon. -->
+ <adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+     <background android:drawable="@drawable/ic_launcher_background" />
+     <foreground android:drawable="@drawable/ic_launcher_foreground" />
+-    <monochrome android:drawable="@drawable/ic_launcher_foreground" />
++    <monochrome android:drawable="@drawable/ic_launcher_monochrome" />
+ </adaptive-icon>
+diff -ruN '--exclude=.git' baseline-original-tree/src/crates/capcraft-android/android/app/src/main/res/values/colors.xml capcraft-android-main/src/crates/capcraft-android/android/app/src/main/res/values/colors.xml
+--- baseline-original-tree/src/crates/capcraft-android/android/app/src/main/res/values/colors.xml	1970-01-01 00:00:00.000000000 +0000
++++ capcraft-android-main/src/crates/capcraft-android/android/app/src/main/res/values/colors.xml	2026-11-10 13:27:31.437420652 +0000
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources>
++    <color name="nv_background">#FF090B12</color>
++    <color name="nv_background_secondary">#FF111522</color>
++    <color name="nv_surface">#FF171D2B</color>
++    <color name="nv_cyan">#FF00D5FF</color>
++    <color name="nv_purple">#FF8957FF</color>
++    <color name="nv_text_primary">#FFF7F9FF</color>
++    <color name="nv_text_secondary">#FF9AA5B8</color>
++    <color name="nv_divider">#FF283044</color>
++</resources>
+diff -ruN '--exclude=.git' baseline-original-tree/src/crates/capcraft-android/android/app/src/main/res/values/strings.xml capcraft-android-main/src/crates/capcraft-android/android/app/src/main/res/values/strings.xml
+--- baseline-original-tree/src/crates/capcraft-android/android/app/src/main/res/values/strings.xml	2026-11-10 13:27:31.374277927 +0000
++++ capcraft-android-main/src/crates/capcraft-android/android/app/src/main/res/values/strings.xml	2026-11-10 13:27:31.437330928 +0000
+@@ -1,5 +1,6 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <resources>
+-    <string name="app_name">CapCraft</string>
+-    <string name="share_label">Edit in CapCraft</string>
++    <string name="app_name">NexVora Motion</string>
++    <string name="app_full_name">NexVora Motion Studio</string>
++    <string name="share_label">Edit in NexVora Motion</string>
+ </resources>
+diff -ruN '--exclude=.git' baseline-original-tree/src/crates/capcraft-android/android/app/src/main/res/values/themes.xml capcraft-android-main/src/crates/capcraft-android/android/app/src/main/res/values/themes.xml
+--- baseline-original-tree/src/crates/capcraft-android/android/app/src/main/res/values/themes.xml	2026-11-10 13:27:31.374286671 +0000
++++ capcraft-android-main/src/crates/capcraft-android/android/app/src/main/res/values/themes.xml	2026-11-10 13:27:31.438267878 +0000
+@@ -1,9 +1,9 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <resources>
+-    <style name="Theme.CapCraft" parent="android:Theme.Material.NoActionBar">
+-        <item name="android:windowBackground">@android:color/black</item>
+-        <item name="android:statusBarColor">@android:color/black</item>
+-        <item name="android:navigationBarColor">@android:color/black</item>
++    <style name="Theme.NexVoraMotion" parent="android:Theme.Material.NoActionBar">
++        <item name="android:windowBackground">@color/nv_background</item>
++        <item name="android:statusBarColor">@color/nv_background</item>
++        <item name="android:navigationBarColor">@color/nv_background</item>
+         <item name="android:windowLightStatusBar">false</item>
+     </style>
+ </resources>
+diff -ruN '--exclude=.git' baseline-original-tree/src/crates/capcraft-android/android/app/src/main/res/values-v31/themes.xml capcraft-android-main/src/crates/capcraft-android/android/app/src/main/res/values-v31/themes.xml
+--- baseline-original-tree/src/crates/capcraft-android/android/app/src/main/res/values-v31/themes.xml	1970-01-01 00:00:00.000000000 +0000
++++ capcraft-android-main/src/crates/capcraft-android/android/app/src/main/res/values-v31/themes.xml	2026-11-10 13:27:31.438412285 +0000
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources>
++    <!-- Android 12+ system splash: the NexVora Motion mark on the app's background. No extra dependency. -->
++    <style name="Theme.NexVoraMotion" parent="android:Theme.Material.NoActionBar">
++        <item name="android:windowBackground">@color/nv_background</item>
++        <item name="android:statusBarColor">@color/nv_background</item>
++        <item name="android:navigationBarColor">@color/nv_background</item>
++        <item name="android:windowLightStatusBar">false</item>
++        <item name="android:windowSplashScreenBackground">@color/nv_background</item>
++        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
++    </style>
++</resources>
+diff -ruN '--exclude=.git' baseline-original-tree/src/crates/capcraft-android/android/gradle.properties capcraft-android-main/src/crates/capcraft-android/android/gradle.properties
+--- baseline-original-tree/src/crates/capcraft-android/android/gradle.properties	2026-11-10 13:27:31.374321909 +0000
++++ capcraft-android-main/src/crates/capcraft-android/android/gradle.properties	2026-11-10 13:27:31.436131119 +0000
+@@ -12,5 +12,5 @@
+ 
+ # The app's version and its version code (before the ABI digit: see app/build.gradle.kts, the build
+ # checks the two agree). Set both to the release's before tagging it.
+-capcraft.version=0.0.4-beta
+-capcraft.versionCode=401
++capcraft.version=1.0.0
++capcraft.versionCode=1000099
+diff -ruN '--exclude=.git' baseline-original-tree/src/crates/capcraft-android/android/settings.gradle.kts capcraft-android-main/src/crates/capcraft-android/android/settings.gradle.kts
+--- baseline-original-tree/src/crates/capcraft-android/android/settings.gradle.kts	2026-11-10 13:27:31.374417023 +0000
++++ capcraft-android-main/src/crates/capcraft-android/android/settings.gradle.kts	2026-11-10 13:27:31.435714786 +0000
+@@ -21,5 +21,5 @@
+     }
+ }
+ 
+-rootProject.name = "CapCraft"
++rootProject.name = "NexVoraMotionStudio"
+ include(":app")

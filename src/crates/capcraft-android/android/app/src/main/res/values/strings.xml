@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NexVora Motion</string>
+    <string name="app_full_name">NexVora Motion Studio</string>
+    <string name="share_label">Edit in NexVora Motion</string>
+</resources>
